@@ -10,7 +10,7 @@ def afficher_mot(mot,lettres_trouvees):
       print(mot[i],end='')
 
     else:
-      print("  _  ", end='')
+      print(" _ ", end='')
 
   print()
   #print()
@@ -40,10 +40,10 @@ def main(Mots):
     if lettre not in mot:
       nombre_tentatives -= 1
 
-    elif lettre in mot and lettre not in lettres_trouvees:
+    if lettre in mot and lettre not in lettres_trouvees:
       lettres_trouvees.add(lettre)
 
-    elif mot_trouve(mot, lettres_trouvees):
+    if mot_trouve(mot, lettres_trouvees):
       print("Le mot a été trouvé !!")
       print(mot)
       break
